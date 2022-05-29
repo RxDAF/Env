@@ -5,8 +5,13 @@ import (
 	"fmt"
 	"io"
 	"os"
+
+	rmaster "github.com/RxDAF/Master"
 )
 
+func (s *Server) master() *rmaster.RMaster {
+
+}
 func (s *Server) checkLocalFiles() error {
 	for _, serviceName := range s.cfg.Roles {
 		if err := s.checkLocalFile(serviceName); err != nil {
@@ -42,6 +47,7 @@ func (s *Server) checkIfNeedUpdate(serviceName string, path string) (bool, error
 	md := md5Handle.Sum(nil)        //计算 MD5 值，返回 []byte
 	md5str := fmt.Sprintf("%x", md) //将 []byte 转为 string
 	// 开始获取远程服务器的md5
+
 }
 func (s *Server) checkLocalFile(serviceName string) error {
 	path := s.cfg.DownloadBufPath + string(os.PathSeparator) + serviceName
