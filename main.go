@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"main.go/cfg"
-	"main.go/server"
+	"github.com/RxDAF/Env/cfg"
+	"github.com/RxDAF/Env/server"
 )
 
 func main() {

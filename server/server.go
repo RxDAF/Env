@@ -1,6 +1,6 @@
 package server
 
-import "main.go/cfg"
+import "github.com/RxDAF/Env/cfg"
 
 type Server struct {
 	cfg *cfg.Configure
